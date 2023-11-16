@@ -7,7 +7,6 @@ now_dir = os.getcwd()
 sys.path.append(now_dir)
 from custom.slicer2 import predata
 from paddlespeech.cli.asr.infer import ASRExecutor
-
 from infer.modules.uvr5.modules import uvr
 
 from configs.config import Config
@@ -227,4 +226,4 @@ with gr.Blocks() as demo:
                  """)
     text_button.click(run_acoustic, inputs=[text_input,text_speaker,audio], outputs=[text_input,vacal_audio])
     lyr_button.click(gen_lyc, inputs=[audio], outputs=[text_input])
-demo.launch(server_name='127.0.0.1',server_port=7861)
+demo.launch(server_name='172.21.182.86',server_port=7861)

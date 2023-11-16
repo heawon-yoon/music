@@ -1,0 +1,5 @@
+Looking in indexes: http://mirrors.cloud.aliyuncs.com/pypi/simple/
+Collecting python-dotenv
+  Downloading http://mirrors.cloud.aliyuncs.com/pypi/packages/44/2f/62ea1c8b593f4e093cc1a7768f0d46112107e790c3e478532329e434f00b/python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+Installing collected packages: python-dotenv
+Successfully installed python-dotenv-1.0.0
