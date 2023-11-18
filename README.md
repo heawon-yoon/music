@@ -22,6 +22,13 @@ mfa model
 path music/
 wget https://huggingface.co/datasets/fox7005/tool/resolve/main/mfa-opencpop-extension.zip
 
+download checkpoint 
+final path checkpoint/nsf_hifigan
+
+cd checkpoint 
+wget https://github.com/openvpi/vocoders/releases/download/nsf-hifigan-v1/nsf_hifigan_20221211.zip
+unzip nsf_hifigan_20221211.zip
+
 
 
 
