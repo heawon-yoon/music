@@ -71,8 +71,9 @@ def gen_lyc(audio):
     
      global rstd
      global lyc_data
-     rst = uvr("HP5-主旋律人声vocals+其他instrumentals","","opt2"
-     ,audio,"opt2",10,"wav")
+     tpath = random.randint(1, 100)
+     rst = uvr("HP5-主旋律人声vocals+其他instrumentals","","opt2/"+tpath
+     ,audio,"opt2/"+tpath,10,"wav")
      print("rst",rst)
      rstd = rst
      print("rstd",rstd)
