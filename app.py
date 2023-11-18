@@ -179,45 +179,25 @@ def run_acoustic(text_input,text_speaker,audio):
 def flip_image(x):
     return np.fliplr(x)
 with gr.Blocks() as demo:
-    #用markdown语法编辑输出一段话
-    gr.Markdown("混鲲AI大模型")
+    gr.Markdown("混鲲AI实验室")
     # 设置tab选项卡
     with gr.Tab("AI魔改翻唱"):
-        #Blocks特有组件，设置所有子组件按垂直排列
-        #垂直排列是默认情况，不加也没关系
         with gr.Column():
             audio = gr.File(file_count="multiple",label="上传音频", info="需上传wav格式",height="100")
             lyr_button = gr.Button("生成歌词")
             text_input = gr.Textbox(label="歌词魔改", info="一定要按原来歌词字数一样!")
             text_speaker =  gr.Dropdown(
-            ["牛夫人", "Beyong", "妖姬"], label="AI原声", info="Will add more animals later!"
+            ["牛夫人"], label="AI原声", info="Will add more animals later!", value="牛夫人"
             )
             text_button = gr.Button("推理AI音频")
             vacal_audio = gr.Audio(label="AI音频", info="合成音频最终显示在这里")
-    with gr.Tab("AI歌词"):
-        #Blocks特有组件，设置所有子组件按水平排列
-        with gr.Row():
-            image_input = gr.Image()
-            image_output = gr.Image()
-        image_button = gr.Button("Flip")
-    with gr.Tab("AI音频+视频"):
-        #Blocks特有组件，设置所有子组件按水平排列
-        with gr.Row():
-            image_input = gr.Image()
-            image_output = gr.Image()
-        image_button = gr.Button("Flip")
-    with gr.Tab("AI声音转换"):
-        #Blocks特有组件，设置所有子组件按水平排列
-        with gr.Row():
-            image_input = gr.Image()
-            image_output = gr.Image()
-        image_button = gr.Button("Flip")
+    
     #设置折叠内容
     with gr.Accordion("推理流程!"):
         gr.Markdown(
                  """
                 1.音频文件uvr人声分离
-                2.人声降噪,美化,增强
+                2.人声降噪,增强
                 3.autoSliece人声按片段智能AI切片
                 4.ASR人声自动识别转歌词
                 5.生成歌词后可以手动修改歌词
