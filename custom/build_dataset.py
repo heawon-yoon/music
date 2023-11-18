@@ -17,6 +17,9 @@ def build_dataset(wavs, tg, dataset, skip_silence_insertion=True, wav_subtype="P
     del tg
     dataset = pathlib.Path(dataset)
     filelist = list(wavs.glob('*.wav'))
+    
+    filelist.sort(key=lambda x:int(x.name.split('_10_')[-1].split('.wav')[0]))
+    print(filelist)
 
     dataset.mkdir(parents=True, exist_ok=True)
     (dataset / 'wavs').mkdir(exist_ok=True)
@@ -60,3 +63,7 @@ def build_dataset(wavs, tg, dataset, skip_silence_insertion=True, wav_subtype="P
 
     print(f'All wavs and transcriptions saved in {dataset}')
 
+
+    
+if __name__ == "__main__":
+    build_dataset()

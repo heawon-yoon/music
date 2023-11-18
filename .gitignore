@@ -15,7 +15,7 @@ infer_out/
 /venv/
 /artifacts/
 /exp/
-/opt/
+/opt2/
 /assets/
 .vscode
 .ipynb_checkpoints/

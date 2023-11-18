@@ -7,6 +7,7 @@ now_dir = os.getcwd()
 sys.path.append(now_dir)
 from custom.slicer2 import predata
 from paddlespeech.cli.asr.infer import ASRExecutor
+
 from infer.modules.uvr5.modules import uvr
 
 from configs.config import Config
@@ -33,7 +34,6 @@ from custom.enhance_tg import enhance_tg
 from custom.build_dataset import build_dataset
 from custom.add_ph_num import add_ph_num
 from custom.estimate_midi import estimate_midi
-from custom.convert_ds import csv2ds
 from custom.combine_ds2 import combine_ds
 from custom.path_util import get_full_path
 from custom.audio import merge_wav
@@ -68,11 +68,11 @@ lyc_data = []
 slice_data = None
 rstd = None
 def gen_lyc(audio):
-     print("lyc") 
+    
      global rstd
      global lyc_data
-     rst = uvr("HP5-主旋律人声vocals+其他instrumentals","","opt"
-     ,audio,"opt",10,"wav")
+     rst = uvr("HP5-主旋律人声vocals+其他instrumentals","","opt2"
+     ,audio,"opt2",10,"wav")
      print("rst",rst)
      rstd = rst
      print("rstd",rstd)
@@ -121,8 +121,9 @@ def gen_lyc(audio):
      return "\n".join(rst_data)
 def run_acoustic(text_input,text_speaker,audio):
      #人声分离
-     rst = uvr("HP2-人声vocals+非人声instrumentals","","opt"
-     ,audio,"opt",10,"wav")
+     #人声分离
+     #rst = uvr("HP2-人声vocals+非人声instrumentals","","opt"
+     #,audio,"opt",10,"wav")
      #print("rst",rst)
      print(slice_data)
      print(text_input)
@@ -148,7 +149,7 @@ def run_acoustic(text_input,text_speaker,audio):
     
     
      #生成mfa gridtext文件 mfa align path/to/tmp/dir/ path/to/your/dictionary.txt path/to/your/model.zip path/to/your/textgrids/ --beam 100 --clean --overwrite
-     os.system("mfa align %s %s %s %s --clean --overwrite --auto_server False" % (dir_tmp_path+"/tmp", "dictionaries/opencpop.txt","mfa-opencpop-extension.zip",dir_tmp_path+"/textgrids"))
+     os.system("mfa align %s %s %s %s --beam 100 --clean --overwrite" % (dir_tmp_path+"/tmp", "dictionaries/opencpop.txt","mfa-opencpop-extension.zip",dir_tmp_path+"/textgrids"))
     
      #重新优化gridtext
      enhance_tg(dir_tmp_path+"/tmp","dictionaries/opencpop.txt",dir_tmp_path+"/textgrids",dir_tmp_path+"/textgrids/final")
@@ -187,7 +188,7 @@ with gr.Blocks() as demo:
             lyr_button = gr.Button("生成歌词")
             text_input = gr.Textbox(label="歌词魔改", info="一定要按原来歌词字数一样!")
             text_speaker =  gr.Dropdown(
-            ["opencpop"], label="AI原声", info="Will add more animals later!"
+            ["牛夫人", "Beyong", "妖姬"], label="AI原声", info="Will add more animals later!"
             )
             text_button = gr.Button("推理AI音频")
             vacal_audio = gr.Audio(label="AI音频", info="合成音频最终显示在这里")

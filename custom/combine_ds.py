@@ -4,6 +4,8 @@ import json
 
 def combine_ds(folder_path,wavs):
     txt_files = [f for f in os.listdir(folder_path) if f.endswith('.ds')]
+    txt_files.sort(key=lambda x:int(x.split('_10_')[-1].split('.ds')[0]))
+    print("combine_ds",txt_files)
     all_fl = "all_fl.ds"
     all_fl_ph = os.path.join(folder_path, all_fl)
     json_datas = []
