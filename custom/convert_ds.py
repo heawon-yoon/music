@@ -4,7 +4,7 @@ import pathlib
 from decimal import Decimal
 from math import isclose
 import parselmouth
-
+import os
 import click
 import librosa
 import numpy as np
@@ -90,19 +90,11 @@ def cli():
 @click.command(help="Convert a transcription file to DS files")
 @click.argument(
     "transcription_file",
-    type=click.Path(
-        dir_okay=False,
-        resolve_path=True,
-        path_type=pathlib.Path,
-        exists=True,
-        readable=True,
-    ),
-    metavar="TRANSCRIPTIONS",
+    type=str,
 )
 @click.argument(
     "wavs_folder",
-    type=click.Path(file_okay=False, resolve_path=True, path_type=pathlib.Path),
-    metavar="FOLDER",
+    type=str,
 )
 @click.option(
     "--tolerance",
@@ -130,23 +122,24 @@ def cli():
     help="Pitch extractor (parselmouth, rmvpe)",
     metavar="ALGORITHM",
 )
-def csv2ds(transcription_file, wavs_folder, tolerance, hop_size, sample_rate, pe):
+def csv2ds(transcription_file: str, wavs_folder: str, tolerance, hop_size, sample_rate, pe):
+    print(wavs_folder)
     """Convert a transcription file to DS file"""
-    assert wavs_folder.is_dir(), "wavs folder not found."
+    #assert wavs_folder.is_dir(), "wavs folder not found."
     out_ds = {}
     out_exists = []
     with open(transcription_file, "r", encoding="utf-8") as f:
         for trans_line in tqdm(csv.DictReader(f)):
             item_name = trans_line["name"]
-            wav_fn = wavs_folder / f"{item_name}.wav"
-            ds_fn = wavs_folder / f"{item_name}.ds"
+            wav_fn = wavs_folder + f"/{item_name}.wav"
+            ds_fn = wavs_folder + f"/{item_name}.ds"
             ph_dur = list(map(Decimal, trans_line["ph_dur"].strip().split()))
             ph_num = list(map(int, trans_line["ph_num"].strip().split()))
             note_seq = trans_line["note_seq"].strip().split()
             note_dur = list(map(Decimal, trans_line["note_dur"].strip().split()))
             note_glide = trans_line["note_glide"].strip().split() if "note_glide" in trans_line else None
 
-            assert wav_fn.is_file(), f"{item_name}.wav not found."
+            #assert wav_fn.is_file(), f"{item_name}.wav not found."
             assert len(ph_dur) == sum(ph_num), "ph_dur and ph_num mismatch."
             assert len(note_seq) == len(note_dur), "note_seq and note_dur should have the same length."
             if note_glide:
@@ -190,7 +183,7 @@ def csv2ds(transcription_file, wavs_folder, tolerance, hop_size, sample_rate, pe
             if note_glide:
                 ds_content[0]["note_glide"] = " ".join(note_glide)
             out_ds[ds_fn] = ds_content
-            if ds_fn.exists():
+            if os.path.exists(ds_fn):
                 out_exists.append(ds_fn)
     if not out_exists or click.confirm(f"Overwrite {len(out_exists)} existing DS files?", abort=False):
         for ds_fn, ds_content in out_ds.items():

@@ -44,6 +44,7 @@ class AudioPre:
     def _path_audio_(
         self, music_file, ins_root=None, vocal_root=None, format="flac", is_hp3=False
     ):
+        print(music_file)
         if ins_root is None and vocal_root is None:
             return "No save root."
         name = os.path.basename(music_file)

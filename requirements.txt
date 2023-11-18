@@ -4,11 +4,9 @@
 
 click
 h5py
-librosa<0.10.0
-lightning~=2.0.0
+lightning==2.0.0
 matplotlib
 MonkeyType==23.3.0
-numpy  # ==1.23.5
 onnx==1.14.0
 onnxsim==0.4.31
 praat-parselmouth==0.4.3
@@ -29,7 +27,7 @@ g2pM
 alignment
 TextGrid
 SoundFile
-paddlespeech
+paddlespeech==1.4.1
 ffmpeg-python
 python-dotenv>=1.0.0
 faiss-cpu==1.7.3
@@ -39,5 +37,20 @@ Pillow>=9.1.1
 resampy>=0.4.2
 setuptools-scm
 pytest-runner
-paddlepaddle
+paddlepaddle==2.4.2
 tqdm
+montreal-forced-aligner==2.0.6
+hdbscan
+kaldi
+sox
+biopython==1.78
+praatio<6.0.0
+sqlalchemy==1.4.46
+requests
+colorama
+pynini
+openfst
+baumwelch
+ngram
+numpy==1.23.5
+librosa==0.9.2

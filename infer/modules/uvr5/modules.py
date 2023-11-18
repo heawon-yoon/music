@@ -53,7 +53,8 @@ def uvr(model_name, inp_root, save_root_vocal, paths, save_root_ins, agg, format
         print("paths :",paths)
         for path in paths:
             inp_path = os.path.join(inp_root, path)
-            print(inp_path)
+            print(save_root_ins)
+            print("inp_path",inp_path)
             need_reformat = 1
             done = 0
             try:

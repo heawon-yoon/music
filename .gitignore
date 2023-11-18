@@ -6,6 +6,7 @@ local_tools/
 *.ckpt
 *.pth
 infer_out/
+*.zip
 *.onnx
 /data/*
 !/data/.gitkeep
@@ -13,7 +14,9 @@ infer_out/
 !/checkpoints/.gitkeep
 /venv/
 /artifacts/
-
+/exp/
+/opt/
+/assets/
 .vscode
 .ipynb_checkpoints/
 .DS_Store
