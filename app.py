@@ -122,11 +122,7 @@ def gen_lyc(audio):
              print("%s->Suc." % e)
      return "\n".join(rst_data)
 def run_acoustic(text_input,text_speaker,audio):
-     #人声分离
-     #人声分离
-     #rst = uvr("HP2-人声vocals+非人声instrumentals","","opt"
-     #,audio,"opt",10,"wav")
-     #print("rst",rst)
+    
      print(slice_data)
      print(text_input)
      if slice_data is None:
@@ -180,19 +176,18 @@ def flip_image(x):
     return np.fliplr(x)
 with gr.Blocks() as demo:
     gr.Markdown("混鲲AI实验室")
-    # 设置tab选项卡
     with gr.Tab("AI魔改翻唱"):
         with gr.Column():
             audio = gr.File(file_count="multiple",label="上传音频", info="需上传wav格式",height="100")
             lyr_button = gr.Button("生成歌词")
             text_input = gr.Textbox(label="歌词魔改", info="一定要按原来歌词字数一样!")
             text_speaker =  gr.Dropdown(
-            ["牛夫人"], label="AI原声", info="Will add more animals later!", value="牛夫人"
+            ["牛夫人"], label="AI原声", info="Will add more  later!", value="牛夫人"
             )
             text_button = gr.Button("推理AI音频")
             vacal_audio = gr.Audio(label="AI音频", info="合成音频最终显示在这里")
     
-    #设置折叠内容
+    
     with gr.Accordion("推理流程!"):
         gr.Markdown(
                  """
