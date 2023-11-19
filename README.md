@@ -45,6 +45,8 @@ pip install -r requirements.txt
 
 conda install -c conda-forge montreal-forced-aligner==2.0.6 --yes
 
+pip install paddlepaddle==2.4.2
+
 pip install setuptools-scm
 
 pip install pytest-runner
