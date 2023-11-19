@@ -78,7 +78,7 @@ not to unzip that!
 ## User Guide
 
 
-#####If you encounter a "module not found" error during startup or runtime, please reinstall the module according to the version specified in the requirements.txt file.
+##### If you encounter a "module not found" error during startup or runtime, please reinstall the module according to the version specified in the requirements.txt file.
 
 Step 1:<br/>
     start gradio ui
