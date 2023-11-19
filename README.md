@@ -59,9 +59,9 @@ pip install paddlespeech==1.4.1
 ```
 
 
-## download models
+## Download Models
 
-1.download checkpoint 
+1.Download checkpoint 
 
 final path like checkpoint/nsf_hifigan,checkpoint/my_experiment
 ```
@@ -73,7 +73,7 @@ final path like checkpoint/nsf_hifigan,checkpoint/my_experiment
 
 ```
 
-2.download uvr model 
+2.Download uvr model 
 
 
 final path like assets/uvr5_weights/HP5-主旋律人声vocals+其他instrumentals.pth
@@ -86,7 +86,7 @@ final path like assets/uvr5_weights/HP5-主旋律人声vocals+其他instrumental
 
 ```
 
-3.download mfa model 
+3.Download mfa model 
 
 final path like assets/uvr5_weights/mfa-opencpop-extension.zip
 not to unzip that!
