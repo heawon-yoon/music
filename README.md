@@ -87,8 +87,9 @@ python app.py
 
 Step 2:<br/>
     upload audio file and click button
-    
-    <img alt="" src="https://github.com/hunkunai/music/blob/main/WechatIMG543.jpeg" width="300" height="300" />
+    <div>
+      <img alt="" src="https://github.com/hunkunai/music/blob/main/WechatIMG543.jpeg" width="300" height="300" />
+    <div/>
 
 
 
