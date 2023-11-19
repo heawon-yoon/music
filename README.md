@@ -4,6 +4,26 @@ can sing any song you upload the audio file using the DiffSinger(https://github.
 
 Not only can it sing and recognize lyrics, but it also supports modifying lyrics creatively.
 
+#### process!
+
+
+1. Audio file UVR voice separation
+
+2. Vocal noise reduction and enhancement
+
+3. AutoSlice voice intelligent AI slicing by segment
+
+4. ASR automatic vocal recognition and lyrics conversion
+
+5. After generating lyrics, you can manually modify the lyrics
+
+6. MFA lyrics audio automatic forced alignment
+
+7. Data preprocessing
+
+8. Start infer
+
+9. Recombine vocals and accompaniment to generate final audio
 
 ## Installation
 
