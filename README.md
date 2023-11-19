@@ -1,6 +1,6 @@
 # AI MUSIC
 
-You can sing any song using the DiffSinger(https://github.com/openvpi/DiffSinger) model.
+can sing any song you upload the audio file using the DiffSinger(https://github.com/openvpi/DiffSinger) model.
 
 Not only can it sing and recognize lyrics, but it also supports modifying lyrics creatively.
 
@@ -8,10 +8,35 @@ Not only can it sing and recognize lyrics, but it also supports modifying lyrics
 ## Installation
 
 ```
+git clone https://github.com/hunkunai/music.git
+
+cd music
+
 conda create -n music python=3.8 -y
+
 conda activate music
+
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+conda install ffmpeg
+
+pip install -r requirements.txt
+
+
 ```
 
+
+## download models
+
+1.download checkpoint 
+
+final path like checkpoint/nsf_hifigan,checkpoint/my_experiment
+```
+  wget https://github.com/openvpi/vocoders/releases/download/nsf-hifigan-v1/nsf_hifigan_20221211.zip
+  unzip nsf_hifigan_20221211.zip
+
+```
+  
 1.git clone https://github.com/hunkunai/music.git
 2.conda create -n diffsinger python=3.8 -y
 3.pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
@@ -22,6 +47,7 @@ conda install -c conda-forge python=3.8 kaldi sox librosa biopython praatio tqdm
 
 
 download models
+
 
 uvr model 
 path : assets/uvr5_weights/
