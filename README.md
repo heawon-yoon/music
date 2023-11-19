@@ -1,3 +1,5 @@
+[**English**](./README.md) | [**中文简体**](./README_zh.md)
+
 # AI MUSIC
 
 can sing any song you upload the audio file using the DiffSinger(https://github.com/openvpi/DiffSinger) model.
