@@ -77,13 +77,19 @@ not to unzip that!
 
 ## User Guide
 
-step 1:
+Step 1:<br/>
     start gradio ui
 
 ```
 python app.py
 
 ```
+
+Step 2:<br/>
+    upload audio file and click button
+
+    ![](https://github.com/hunkunai/music/blob/main/WechatIMG543.jpeg)
+
 
 
 
