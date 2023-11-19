@@ -12,13 +12,14 @@ git clone https://github.com/hunkunai/music.git
 
 cd music
 
+
 conda create -n music python=3.8 -y
 
 conda activate music
 
+
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
-conda install ffmpeg
 
 pip install -r requirements.txt
 
