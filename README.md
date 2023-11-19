@@ -1,5 +1,7 @@
-# AI MUSCI
+# AI MUSIC
 
+1. "You can sing any song using the DiffSinger(https://github.com/openvpi/DiffSinger) model."
+2. "Not only can it sing and recognize lyrics, but it also supports modifying lyrics creatively."
 
 
 install 
