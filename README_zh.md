@@ -1,3 +1,5 @@
+[**English**](./README.md) | [**中文简体**](./README_zh_CN.md)
+
 # AI MUSIC
 
 可以唱任何你上传的音乐,用的是DiffSinger(https://github.com/openvpi/DiffSinger)模型.<br/>
