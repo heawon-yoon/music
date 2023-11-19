@@ -146,7 +146,7 @@ def run_acoustic(text_input,text_speaker,audio):
     
     
      #生成mfa gridtext文件 mfa align path/to/tmp/dir/ path/to/your/dictionary.txt path/to/your/model.zip path/to/your/textgrids/ --beam 100 --clean --overwrite
-     os.system("mfa align %s %s %s %s --beam 100 --clean --overwrite" % (dir_tmp_path+"/tmp", "dictionaries/opencpop.txt","mfa-opencpop-extension.zip",dir_tmp_path+"/textgrids"))
+     os.system("mfa align %s %s %s %s --beam 100 --clean --overwrite" % (dir_tmp_path+"/tmp", "dictionaries/opencpop.txt","assets/mfa-opencpop-extension.zip",dir_tmp_path+"/textgrids"))
     
      #重新优化gridtext
      enhance_tg(dir_tmp_path+"/tmp","dictionaries/opencpop.txt",dir_tmp_path+"/textgrids",dir_tmp_path+"/textgrids/final")
