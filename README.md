@@ -23,6 +23,8 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 
 pip install -r requirements.txt
 
+conda install -c conda-forge montreal-forced-aligner==2.0.6 --yes
+
 pip install setuptools-scm
 
 pip install pytest-runner
@@ -72,9 +74,16 @@ not to unzip that!
 
 ```
 
-pgvector montreal-forced-aligner=2.0.6 pynini hdbscan librosa-0.8.1
-conda install -c conda-forge python=3.8 kaldi sox librosa biopython praatio tqdm requests colorama pyyaml pynini openfst baumwelch ngram
 
+## User Guide
+
+step 1:
+    start gradio ui
+
+```
+python app.py
+
+```
 
 
 
