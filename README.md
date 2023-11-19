@@ -77,6 +77,9 @@ not to unzip that!
 
 ## User Guide
 
+
+#####If you encounter a "module not found" error during startup or runtime, please reinstall the module according to the version specified in the requirements.txt file.
+
 Step 1:<br/>
     start gradio ui
 
@@ -96,7 +99,7 @@ Step 2:<br/>
 Step 3:<br/>
     click infer button
     <div>
-      <img alt="" src="https://github.com/hunkunai/music/blob/main/WechatIMG543.jpeg" width="600" height="400" />
+      <img alt="" src="https://github.com/hunkunai/music/blob/main/WechatIMG544.jpeg" width="600" height="400" />
     <div/>
 
 
