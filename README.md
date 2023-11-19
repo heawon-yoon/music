@@ -5,7 +5,13 @@ You can sing any song using the DiffSinger(https://github.com/openvpi/DiffSinger
 Not only can it sing and recognize lyrics, but it also supports modifying lyrics creatively.
 
 
-install 
+## Installation
+
+```
+conda create -n music python=3.8 -y
+conda activate music
+```
+
 1.git clone https://github.com/hunkunai/music.git
 2.conda create -n diffsinger python=3.8 -y
 3.pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
