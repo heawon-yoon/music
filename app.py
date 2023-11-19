@@ -202,4 +202,4 @@ with gr.Blocks() as demo:
                  """)
     text_button.click(run_acoustic, inputs=[text_input,text_speaker,audio], outputs=[text_input,vacal_audio])
     lyr_button.click(gen_lyc, inputs=[audio], outputs=[text_input])
-demo.launch(server_name='172.21.182.86',server_port=7861)
+demo.launch(server_name='localhost',server_port=7861)
