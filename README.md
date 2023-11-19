@@ -88,7 +88,7 @@ python app.py
 Step 2:<br/>
     upload audio file and click button
 
-    ![](https://github.com/hunkunai/music/blob/main/WechatIMG543.jpeg)
+    ![](https://github.com/hunkunai/music/raw/main/WechatIMG543.jpeg)
 
 
 
