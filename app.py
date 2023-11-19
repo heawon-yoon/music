@@ -177,7 +177,7 @@ with gr.Blocks() as demo:
     gr.Markdown("混鲲AI实验室")
     with gr.Tab("AI魔改翻唱"):
         with gr.Column():
-            audio = gr.File(file_count="multiple",label="上传音频", info="需上传wav格式",height="100")
+            audio = gr.File(file_count="multiple",label="上传音频", info="干净人声效果最佳",height="100")
             lyr_button = gr.Button("生成歌词")
             text_input = gr.Textbox(label="歌词魔改", info="一定要按原来歌词字数一样!")
             text_speaker =  gr.Dropdown(
