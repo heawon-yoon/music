@@ -88,7 +88,15 @@ python app.py
 Step 2:<br/>
     upload audio file and click button
     <div>
-      <img alt="" src="https://github.com/hunkunai/music/blob/main/WechatIMG543.jpeg" width="300" height="300" />
+      <img alt="" src="https://github.com/hunkunai/music/blob/main/WechatIMG543.jpeg" width="600" height="400" />
+    <div/>
+
+
+
+Step 3:<br/>
+    click infer button
+    <div>
+      <img alt="" src="https://github.com/hunkunai/music/blob/main/WechatIMG543.jpeg" width="600" height="400" />
     <div/>
 
 
