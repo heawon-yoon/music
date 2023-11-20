@@ -95,7 +95,7 @@ pip install paddlespeech==1.4.1
 
 ## 启动UI
 
-演示视频 [bilibili](https://www.bilibili.com/video/BV1bN41137UA/?vd_source=5afbd824d0483e6ab60779ed3faa4535)
+演示视频 [bilibili](https://www.bilibili.com/video/BV1wG41197K4/)   [bilibili](https://www.bilibili.com/video/BV1bN41137UA/?vd_source=5afbd824d0483e6ab60779ed3faa4535)
 
 
 ##### 启动跟运行过程中如果报 "XXX module not found" ,请根据requirements.txt file中的对应版本重新pip install 该模块
