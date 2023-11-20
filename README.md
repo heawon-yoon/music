@@ -101,7 +101,8 @@ not to unzip that!
 
 ## User Guide
 
-demos on [bilibili](https://www.bilibili.com/video/BV1bN41137UA/?vd_source=5afbd824d0483e6ab60779ed3faa4535)
+demos on [bilibili](https://www.bilibili.com/video/BV1wG41197K4/)   [bilibili](https://www.bilibili.com/video/BV1bN41137UA/?vd_source=5afbd824d0483e6ab60779ed3faa4535)
+
 
 ##### If you encounter a "module not found" error during startup or runtime, please reinstall the module according to the version specified in the requirements.txt file.
 
